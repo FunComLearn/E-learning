@@ -1,0 +1,304 @@
+<HTML>
+<HEAD>
+<TITLE>
+Formatting Pages with HTML Tables
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<CENTER>
+<H1>
+<FONT COLOR="#FF0000">
+Formatting Pages with HTML Tables
+</FONT>
+</H1>
+<H3> by Donald W. Hyatt</H3>
+</CENTER>
+<H3> The Basic Table Tags</H3>
+The <B>TABLE </B> tags in HTML are not only very useful for displaying data,
+but also for helping for formatting a web page.   Essentially, the tags allow
+a web designer to specify where items are to be placed in the various rows 
+or columns of a
+table, thus giving some control  over relative positions  on that page.
+<P>
+First, lets take a look at some of the basic tags related to tables:
+<TABLE><TR>
+<TD COLSPAN=2>
+<CENTER><EM><B>Opening Tag</B></EM></TD></TD><TD><TD COLSPAN=2>
+<CENTER><EM><B>Closing Tag</B></EM></TD></TR>
+<TD>
+<FONT COLOR="#AA0000">
+&lt;TABLE>
+</TD><TD>
+Start of a Table
+</TD><TD> &nbsp; &nbsp; &nbsp;
+</TD><TD>
+<FONT COLOR="#AA0000">
+&lt;/TABLE>
+</TD><TD>
+End the Table
+</TD></TR><TR><TD> 
+<FONT COLOR="#AA0000">
+&lt;TR>
+</TD><TD>
+Start of a Row in a Table 
+</TD><TD> &nbsp; &nbsp; &nbsp;
+</TD><TD>
+<FONT COLOR="#AA0000">
+&lt;/TR>
+</TD><TD>
+End of a Row 
+</TD></TR><TR><TD> 
+<FONT COLOR="#AA0000">
+&lt;TD>
+</TD><TD>
+Start of a Table Data Cell
+</TD><TD> &nbsp; &nbsp; &nbsp;
+</TD><TD>
+<FONT COLOR="#AA0000">
+&lt;/TD>
+</TD><TD>
+End the Data Cell 
+</TD></TR><TR><TD> 
+<FONT COLOR="#AA0000">
+&lt;TH>
+</TD><TD>
+Start of a Table Header Cell
+</TD><TD> &nbsp; &nbsp; &nbsp;
+</TD><TD>
+<FONT COLOR="#AA0000">
+&lt;/TH>
+</TD><TD>
+End the Header Cell
+
+</TD></TR></TABLE>
+<P>
+<H3> Table Tag Modifiers</H3>
+
+There are a number of modifications that can be included within the
+table tags to specify parameters or provide additional 
+functionality.  Some of them are:
+<BR><BR>
+<TABLE CELLPADDING = 5><TR>
+<TD><FONT COLOR="#AA0000">
+BORDER = <I>n</I></FONT>
+</TD><TD> Existence and size of a border around table cells.  
+</TR><TR>
+<TD><FONT COLOR="#AA0000">
+WIDTH = <I>n</I> </FONT>
+</TD><TD> Width of the Table or Data Cell  
+</TR><TR>
+<TD><FONT COLOR="#AA0000">
+CELLPADDING = <I>n</I> </FONT>
+</TD><TD> Amount of space around data in a cell. (Default is 1)
+</TR><TR>
+<TD><FONT COLOR="#AA0000">
+CELLSPACING = <I>n</I> </FONT>
+</TD><TD> Amount of space between cells. (Default is 2)
+</TR><TR>
+<TD><FONT COLOR="#AA0000">
+COLSPAN = <I>n</I> </FONT>
+</TD><TD> Number of columns spanned by a data cell.  
+</TR><TR>
+<TD><FONT COLOR="#AA0000">
+ROWSPAN = <I>n</I> </FONT>
+</TD><TD> Number of rows spanned by a data cell.  
+</TR><TR>
+<TD><FONT COLOR="#AA0000">
+VALIGN = <I> position</I> </FONT>
+</TD><TD> Alignment of data within a table cell (TOP, BOTTOM, RIGHT, LEFT)  
+</TD></TR></TABLE>
+<P>
+<BR>
+The following example sets up a table of 4 cells in a 2 by 2 matrix.  Each 
+cell contains the word "Cell" and a number.
+<H3> Example: &nbsp; <FONT SIZE=3>    table1.html</FONT></H3>
+
+<FONT COLOR="#AA0000">
+<PRE>
+       &lt;HTML>
+       &lt;BODY BGCOLOR = "#FFFFFF">
+       &lt;H1> A Simple Table &lt;/H1>
+       &lt;TABLE>
+       &lt;TR>
+       &lt;TD> Cell 1  &lt;/TD>
+       &lt;TD> Cell 2  &lt;/TD>
+       &lt;/TR> &lt;TR>
+       &lt;TD> Cell 3  &lt;/TD>
+       &lt;TD> Cell 4  &lt;/TD>
+       &lt;/TR> &lt;/TABLE>
+       &lt;/BODY>
+       &lt;/HTML>
+</PRE>
+</FONT>
+<A HREF="table1.html">
+See the web page 
+</A>
+<H3> Trying Some Simple Modifications</H3>
+<OL>
+<LI> The default table is without borders, so to make them
+  visable, include 
+<FONT COLOR = "#AA0000">
+<nobr>BORDER = 1</nobr>
+</FONT>
+inside the table tag.
+<BR>
+<FONT COLOR = "#AA0000">
+&nbsp; &nbsp; &nbsp;       &lt;TABLE BORDER = 1>
+</FONT>
+<BR>
+<A HREF="table2.html">
+See the results
+</A>
+<BR><BR>
+<LI> To add padding around cell items, include 
+<FONT COLOR = "#AA0000">
+CELLPADDING = 10 
+</FONT>inside the table tag.
+<BR>
+<FONT COLOR = "#AA0000">
+&nbsp; &nbsp; &nbsp;       &lt;TABLE BORDER = 1 CELLPADDING = 10>
+</FONT>
+<BR>
+<A HREF="table3.html">
+See the results
+</A>
+<BR><BR>
+
+<LI> To specify the absolute width of 100 pixels for a cell, include 
+<FONT COLOR = "#AA0000">
+WIDTH  = 100</FONT> inside one of the Data Cell tags.
+Widths can also be specified using percents for relative sizes.
+<BR>
+<FONT COLOR = "#AA0000">
+&nbsp; &nbsp; &nbsp;       &lt;TD WIDTH = 100>
+</FONT>
+<BR>
+<A HREF="table4.html">
+See the results
+</A>
+<BR><BR>
+
+<LI> To  have a cell span two columns, insert 
+<FONT COLOR = "#AA0000">
+ROWSPAN  = 2</FONT> inside the Data Cell tag.
+<BR>
+<FONT COLOR = "#AA0000">
+&nbsp; &nbsp; &nbsp;       &lt;TD ROWSPAN = 2>
+</FONT>
+<BR>
+See the results:
+<A HREF="table5.html">
+With Borders
+</A>
+&nbsp; &nbsp; 
+<A HREF="table5a.html">
+Without Borders
+</A>
+<BR><BR>
+
+<LI> To  align the data at the top of the cell, insert 
+<FONT COLOR = "#AA0000">
+VALIGN = TOP</FONT> inside the Data Cell tag.
+<BR>
+<FONT COLOR = "#AA0000">
+&nbsp; &nbsp; &nbsp;       &lt;TD ROWSPAN = 2 VALIGN = TOP>
+</FONT>
+<BR>
+See the results:
+<A HREF="table6.html">
+With Borders
+</A>
+&nbsp; &nbsp; 
+<A HREF="table6a.html">
+Without Borders
+</A>
+<BR><BR>
+
+<LI> To  color  the data cell Red, insert 
+<FONT COLOR = "#AA0000">
+BGCOLOR = "#FF0000"</FONT> inside the Data Cell tag.
+<BR>
+<FONT COLOR = "#AA0000">
+&nbsp; &nbsp; &nbsp;       &lt;TD ROWSPAN = 2 VALIGN = TOP BGCOLOR = "#FF0000">
+</FONT>
+<BR>
+See the results:
+<A HREF="table7.html">
+With Borders
+</A>
+&nbsp; &nbsp; 
+<A HREF="table7a.html">
+Without Borders
+</A>
+<BR><BR>
+
+<LI> To  add a cell that spans two columns, insert 
+<FONT COLOR = "#AA0000">
+COLSPAN = 2</FONT> inside the Data Cell tag.
+<BR>
+<FONT COLOR = "#AA0000">
+&nbsp; &nbsp; &nbsp;       &lt;TD COLSPAN = 2  BGCOLOR = "#FF0000">
+
+</FONT>
+<BR>
+See the results:
+<A HREF="table8.html">
+With Borders
+</A>
+&nbsp; &nbsp; 
+<A HREF="table8a.html">
+Without Borders
+</A>
+
+</OL>
+<P>
+Many of the examples here are show with and without borders for comparison.  
+When borders are not used, blocks of text and graphics can be creatively
+arranged in relative positions on a webpage, thus allowing greater
+control over the layout.  Designers should be warned that they must
+consider the ramifications of a user changing the font size of the
+text displayed by the browser and how that 
+might affect the overall format.
+<P>
+
+Tables can also be nested inside of other tables, allowing for rather
+complex formats.  Be careful though, because tables can be difficult 
+to debug when cell components are improperly matched, or sizes exceed
+allowable dimensions.  Text can sometimes be hidden behind  large
+graphics, and when table tags are incomplete, often
+nothing will be displayed to the screen at all.
+<H3> Using Tables to Define a General Website Format</H3>
+Sometimes, a web designer will spend significant time planning the format
+of a web page using tables so that all pages will have a consistent look
+and feel.  Let's take a look at a possible model for a web page with
+the following requirements:
+<UL>
+<LI> Title centered across the top
+<LI> A navigation bar along the left side
+<LI> A graphic in the upper right, below the title
+<LI> Text in the center, wrapping around the graphic.
+</UL>
+<BR>
+Once this format structure is established, the web author can import
+blocks of text into the various regions to give each page the same
+general feel.  In the example below, each table region is given a 
+different color to show the parts.  To see how the page is designed,
+just click on "View" and then "Source" on the browser's navigation
+bar.  Seeing how others created web sites you admire is a great way 
+to learn web design. 
+
+<BR>
+<BR>
+See the results:
+<A HREF="table9.html">
+With Borders
+</A>
+&nbsp; &nbsp; 
+<A HREF="table9a.html">
+Without Borders
+</A>
+<BR><BR>
+
+</BODY>
+</HTML>
